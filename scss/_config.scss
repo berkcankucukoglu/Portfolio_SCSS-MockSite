@@ -1,0 +1,16 @@
+//Variables
+$website-width: 1280px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$bg-image: url('../img/showcase.jpg'); //scss file doesnot contain the img file. However, when this thing compiles into dist/css file, it will start seeing our img file. So that why url is written in this way.
+
+//Set Text Color
+@function set-text-color($color) {
+    @if(lightness($color)>50) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
